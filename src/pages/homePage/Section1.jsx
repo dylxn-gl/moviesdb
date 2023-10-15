@@ -35,7 +35,7 @@ const Section1 = ({ title, description, background }) => {
       <Typography sx={{ fontSize: { xs: sizes.font64, lg: sizes.font120 }, fontWeight: '500', }}>
         {title}
       </Typography>
-      <Typography sx={{ fontSize: { xs: sizes.font16, lg: sizes.font24 } }}>
+      <Typography sx={{ fontSize: { xs: sizes.font12, lg: sizes.font24 } }}>
         {description}
       </Typography>
       <Box sx={{
