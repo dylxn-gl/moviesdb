@@ -46,7 +46,7 @@ const Nav = () => {
                                         textDecoration: 'none',
                                         fontWeight: '400',
                                         marginRight: 2,
-                                        fontSize: sizes.font14,
+                                        fontSize: sizes.font20,
                                         '&:hover': {
                                             color: '#17e9e1',
                                         },
@@ -65,6 +65,7 @@ const Nav = () => {
                     }} >
                         <Box component={'a'} href='https://github.com/dylxn-gl' target='_blank'>
                             <GitHubIcon sx={{
+                                fontSize: {xs: sizes.font16, lg: sizes.font20},
                                 color: '#ffffff',
                                 '&:hover': {
                                     color: '#17e9e1',

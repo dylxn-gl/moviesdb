@@ -2,7 +2,7 @@ import { Card, CardMedia } from '@mui/material'
 import PropTypes from 'prop-types'
 
 const MovieCard = ({ background }) => {
- return (
+  return (
     <>
       <Card sx={{
         position: 'relative',
@@ -10,8 +10,8 @@ const MovieCard = ({ background }) => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-end',
-        width: {xs: '100%', md: '216.7px',},
-        height: {xs: '250px', md: '325px', },
+        width: { xs: '100%', md: '216.7px', lg: '337.7px', },
+        height: { xs: '250px', md: '325px', lg: '484px', },
         borderRadius: 1,
       }}>
         <CardMedia
@@ -28,11 +28,11 @@ const MovieCard = ({ background }) => {
           }} />
       </Card >
     </>
- )
+  )
 }
 
 MovieCard.propTypes = {
- background: PropTypes.string.isRequired,
+  background: PropTypes.string.isRequired,
 }
 
 export default MovieCard
