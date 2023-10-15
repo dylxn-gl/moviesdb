@@ -1,4 +1,4 @@
-import { useReducer } from 'react'
+import { useReducer, useState } from 'react'
 import PropTypes from 'prop-types'
 import MoviesReducer from './MoviesReducer'
 import MoviesContext from './MoviesContext'
@@ -7,11 +7,11 @@ import axios from 'axios'
 const MoviesState = ({ children }) => {
   const initialState = {
     movies: [],
-    pageNumber: 1,
     selectedMovie: null
   }
 
   const [state, dispatch] = useReducer(MoviesReducer, initialState)
+  const [pageNumber, setPageNumber] = useState(1)
 
   const options = {
     method: 'GET',
@@ -22,7 +22,7 @@ const MoviesState = ({ children }) => {
     },
   }
 
-  const getMovies = async (pageNumber) => {
+  const getMovies = async () => {
     let url = `https://api.themoviedb.org/3/discover/movie?include_adult=true&include_video=true&language=en-US&page=${pageNumber}&sort_by=popularity.desc`
     const res = await axios.get(url, options)
     dispatch(
@@ -33,7 +33,7 @@ const MoviesState = ({ children }) => {
     )
   }
 
-  const getSelectedMovie = async (pageNumber) => {
+  const getSelectedMovie = async () => {
     let url = `https://api.themoviedb.org/3/discover/movie?include_adult=true&include_video=true&language=en-US&page=${pageNumber}&sort_by=popularity.desc`
     const res = await axios.get(url, options)
     dispatch(
@@ -45,7 +45,7 @@ const MoviesState = ({ children }) => {
   }
 
   return (
-    <MoviesContext.Provider value={{ state, getMovies, getSelectedMovie }}>
+    <MoviesContext.Provider value={{ state, getMovies, getSelectedMovie, pageNumber, setPageNumber }}>
       {children}
     </MoviesContext.Provider>
   )

@@ -29,19 +29,19 @@ const SectionSkeleton = () => {
             opacity: 0.5,
           }}
         />
-        <Skeleton variant='text' width={{ xs: 200, lg: 600 }} height={{ xs: 96, lg: 180 }} />
-        <Skeleton variant='text' width={{ xs: 200, lg: 700 }} height={{ xs: 24, lg: 36 }} />
+        <Skeleton variant='text' width={200} height={96} />
+        <Skeleton variant='text' width={200} height={24} />
         <Box sx={{
           my: 2,
           display: 'flex',
           gap: 2,
         }}>
-          <Skeleton variant='rectangular' width={{ xs: 86, lg: 96 }} height={{ xs: 33, lg: 40 }} />
-          <Skeleton variant='rectangular' width={{ xs: 146, lg: 177 }} height={{ xs: 33, lg: 40 }} />
+          <Skeleton variant='rectangular' width={86} height={33} />
+          <Skeleton variant='rectangular' width={146} height={33} />
         </Box>
       </Box>
       <Box sx={{
-        my: 4,
+        my: 4,  
         mx: '24px',
         display: 'flex',
         justifyContent: 'center',
