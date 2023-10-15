@@ -16,7 +16,7 @@ const Section1 = ({ title, description, background }) => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-end',
-        height: {xs: '400px', lg: '600px'},
+        height: { xs: '400px', lg: '600px' },
       }}
     >
       <Box
@@ -32,10 +32,10 @@ const Section1 = ({ title, description, background }) => {
           opacity: 0.2,
         }}
       />
-      <Typography sx={{ fontSize: {xs: sizes.font64, lg: sizes.font120}, fontWeight: '500', }}>
+      <Typography sx={{ fontSize: { xs: sizes.font64, lg: sizes.font120 }, fontWeight: '500', }}>
         {title}
       </Typography>
-      <Typography sx={{ fontSize: {xs: sizes.font16, lg: sizes.font24}}}>
+      <Typography sx={{ fontSize: { xs: sizes.font16, lg: sizes.font24 } }}>
         {description}
       </Typography>
       <Box sx={{
@@ -43,8 +43,8 @@ const Section1 = ({ title, description, background }) => {
         display: 'flex',
         gap: 2,
       }}>
-        <Button startIcon={<PlayArrowIcon />} variant='contained' sx={{ fontSize: {xs: sizes.font12, lg: sizes.font16}, color: '#ffffff', }}>Play</Button>
-        <Button startIcon={<InfoIcon />} variant='outlined' sx={{ fontSize: {xs: sizes.font12, lg: sizes.font16}, color: '#17e9e1', }}>See more info</Button>
+        <Button startIcon={<PlayArrowIcon />} variant='contained' sx={{ fontSize: { xs: sizes.font12, lg: sizes.font16 }, color: '#ffffff', }}>Play</Button>
+        <Button startIcon={<InfoIcon />} variant='outlined' sx={{ fontSize: { xs: sizes.font12, lg: sizes.font16 }, color: '#17e9e1', }}>See more info</Button>
       </Box>
     </Box>
   );

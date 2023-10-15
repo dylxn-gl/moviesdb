@@ -7,7 +7,6 @@ import axios from 'axios'
 const MoviesState = ({ children }) => {
   const initialState = {
     movies: [],
-    selectedMovie: null
   }
 
   const [state, dispatch] = useReducer(MoviesReducer, initialState)
@@ -33,8 +32,9 @@ const MoviesState = ({ children }) => {
     )
   }
 
-  const getSelectedMovie = async () => {
-    let url = `https://api.themoviedb.org/3/discover/movie?include_adult=true&include_video=true&language=en-US&page=${pageNumber}&sort_by=popularity.desc`
+  const getSelectedMovie = async (id) => {
+
+    let url = `https://api.themoviedb.org/3/movie/${id}?language=en-US`
     const res = await axios.get(url, options)
     dispatch(
       {
@@ -45,7 +45,7 @@ const MoviesState = ({ children }) => {
   }
 
   return (
-    <MoviesContext.Provider value={{ state, getMovies, getSelectedMovie, pageNumber, setPageNumber }}>
+    <MoviesContext.Provider value={{ state, getMovies, getSelectedMovie, pageNumber, setPageNumber, }}>
       {children}
     </MoviesContext.Provider>
   )

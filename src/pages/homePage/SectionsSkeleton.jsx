@@ -41,7 +41,7 @@ const SectionSkeleton = () => {
         </Box>
       </Box>
       <Box sx={{
-        my: 4,  
+        my: 4,
         mx: '24px',
         display: 'flex',
         justifyContent: 'center',
