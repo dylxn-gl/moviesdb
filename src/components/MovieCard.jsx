@@ -1,6 +1,6 @@
 import { Card, CardMedia, CardActionArea } from '@mui/material'
 import PropTypes from 'prop-types'
-import Link from '@mui/material/Link'
+import { Link } from 'react-router-dom'
 
 const MovieCard = ({ background, moviesId }) => {
 
@@ -19,7 +19,7 @@ const MovieCard = ({ background, moviesId }) => {
       >
         <CardActionArea
           component={Link}
-          href={`/${moviesId}`}
+          to={`/${moviesId}`}
           sx={{
             position: 'relative',
             zIndex: 1,
