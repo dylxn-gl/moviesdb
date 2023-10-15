@@ -16,7 +16,7 @@ const Section1 = ({ title, description, background }) => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-end',
-        height: { xs: '400px', lg: '600px' },
+        height: '600px',
       }}
     >
       <Box
